@@ -1,9 +1,9 @@
 <template>
-  <nav class="container flex justify-between px-4 py-8 mx-auto">
+  <nav class="flex justify-between px-20 py-8 mx-auto">
     <div class="hidden space-x-8 md:flex">
-      <a href="">HOME</a>
-      <a href="">ESTATÍSTICAS</a>
-      <a href="">ALTERNATIVAS</a>
+      <router-link to="/">HOME</router-link>
+      <router-link to="/statistics">ESTATÍSTICAS</router-link>
+      <router-link to="/alternatives">ALTERNATIVAS</router-link>
     </div>
     <div class="flex md:hidden">
       <svg
