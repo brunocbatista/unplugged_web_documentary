@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeIndex from '@/views/home/index.vue'
-import StatisticIndex from '@/views/statistics/index.vue'
-import AlternativeIndex from '@/views/alternatives/index.vue'
+import PanoramaIndex from '@/views/panorama/index.vue'
+import AboutIndex from '@/views/about/index.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,14 +12,14 @@ const router = createRouter({
       component: HomeIndex,
     },
     {
-      path: '/statistics',
-      name: 'statistics.index',
-      component: StatisticIndex,
+      path: '/panorama',
+      name: 'panorama.index',
+      component: PanoramaIndex,
     },
     {
-      path: '/alternatives',
-      name: 'alternatives.index',
-      component: AlternativeIndex,
+      path: '/about-project',
+      name: 'about.index',
+      component: AboutIndex,
     },
   ]
 })

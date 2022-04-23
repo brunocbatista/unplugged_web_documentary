@@ -2,8 +2,8 @@
   <nav class="flex justify-between px-20 py-8 mx-auto">
     <div class="hidden space-x-8 md:flex">
       <router-link to="/">HOME</router-link>
-      <router-link to="/statistics">ESTATÍSTICAS</router-link>
-      <router-link to="/alternatives">ALTERNATIVAS</router-link>
+      <router-link to="/panorama">PANORAMA BRASILEIRO</router-link>
+      <router-link to="/about-project">SOBRE O PROJETO</router-link>
     </div>
     <div class="flex md:hidden">
       <svg
@@ -22,7 +22,7 @@
       </svg>
     </div>
     <div>
-      <h3 class="text-lg font-medium text-blue-500">Desconectados</h3>
+      <h3 class="text-lg font-medium">Quanto vale a sua entrega?</h3>
     </div>
   </nav>
 </template>

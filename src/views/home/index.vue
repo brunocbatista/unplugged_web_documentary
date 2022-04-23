@@ -1,11 +1,7 @@
 <template>
-  <carousel-video/>
-  <div class="items-center justify-center text-center p-24">
-    <p class="text-4xl">"Aqui iria alguma frase de efeito"</p>
-    <p class="text-lg">Por fulano</p>
-  </div>
+  <navigation style="width: 1280px"/>
 </template>
 
 <script setup>
-import CarouselVideo from '@/components/home/CarouselVideo.vue'
+import Navigation from '@/components/home/Navigation.vue'
 </script>
