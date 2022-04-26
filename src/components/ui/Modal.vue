@@ -33,9 +33,16 @@
             >
               <DialogTitle
                   as="h3"
-                  class="text-lg font-medium leading-6 text-gray-900"
+                  class="text-lg font-medium leading-6 text-gray-900 flex justify-between"
               >
-                Apenas um teste
+                <p>Apenas um teste</p>
+                <button
+                    type="button"
+                    class="inline-flex justify-center px-4 py-2 text-sm font-bold"
+                    @click="closeModal"
+                >
+                  FECHAR
+                </button>
               </DialogTitle>
 
               <div class="flex justify-center">
@@ -64,14 +71,8 @@
                 </p>
               </div>
 
-              <div class="mt-4">
-                <button
-                    type="button"
-                    class="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-                    @click="closeModal"
-                >
-                  Fechar
-                </button>
+              <div class="mt-4 flex justify-end">
+
               </div>
             </div>
           </TransitionChild>
