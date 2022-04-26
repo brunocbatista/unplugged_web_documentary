@@ -1561,10 +1561,20 @@
         </g>
       </g>
     </svg>
+    <modal :open="openModal" @closeModal="closeAlert()"/>
   </div>
 </template>
 <script setup>
+import { ref } from 'vue'
+import Modal from '@/components/ui/Modal.vue'
+
+const openModal = ref(false)
+
 const sendAlert = () => {
-  alert('aaa');
+  openModal.value = true
+}
+
+const closeAlert = () => {
+  openModal.value = false
 }
 </script>
