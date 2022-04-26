@@ -35,7 +35,9 @@
                   as="h3"
                   class="text-lg font-medium leading-6 text-gray-900 flex justify-between"
               >
-                <p>Apenas um teste</p>
+                <p>
+                  <slot name="title"></slot>
+                </p>
                 <button
                     type="button"
                     class="inline-flex justify-center px-4 py-2 text-sm font-bold"
@@ -45,35 +47,7 @@
                 </button>
               </DialogTitle>
 
-              <div class="flex justify-center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/qrO4YZeyl0I?controls=0"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-              </div>
-
-              <div class="mt-4 flex justify-between">
-                <p class="text-sm text-gray-500">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                  release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                  software like Aldus PageMaker including versions of Lorem Ipsum
-                </p>
-                <p class="text-sm text-gray-500">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                  release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                  software like Aldus PageMaker including versions of Lorem Ipsum
-                </p>
-              </div>
-
-              <div class="mt-4 flex justify-end">
-
-              </div>
+              <slot name="content"></slot>
             </div>
           </TransitionChild>
         </div>
