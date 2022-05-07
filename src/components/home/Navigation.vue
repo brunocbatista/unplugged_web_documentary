@@ -1543,7 +1543,7 @@
             </g>
           </g>
         </g>
-        <g @click="sendAlert" class="cursor-pointer" id="Grupo_de_máscara_1" data-name="Grupo de máscara 1" transform="translate(-526.666 -355.634)" clip-path="url(#clip-path-502)">
+        <g @click="sendAlertFirstVideo" class="cursor-pointer" id="Grupo_de_máscara_1" data-name="Grupo de máscara 1" transform="translate(-526.666 -355.634)" clip-path="url(#clip-path-502)">
           <g id="map-pin-svgrepo-com" transform="translate(913.966 645.747)">
             <g id="Grupo_503" data-name="Grupo 503">
               <path id="Caminho_470" data-name="Caminho 470" d="M256.444,0A43.39,43.39,0,0,0,222.7,70.709c1.948,2.4,5.207,6.177,6.905,8.76,9.781,14.86,22.329,36.44,25.986,54.15.627,3.024,1.384,3.077,2.2.1A195.851,195.851,0,0,1,281.13,81.47a75.577,75.577,0,0,1,7.14-8.516,43.816,43.816,0,0,0,7.485-11.16A43.357,43.357,0,0,0,256.444,0Zm0,66.89a24.238,24.238,0,1,1,24.24-24.24A24.24,24.24,0,0,1,256.444,66.89Z" transform="translate(-213.017)" fill="#010002"/>
@@ -1551,7 +1551,7 @@
             </g>
           </g>
         </g>
-        <g @click="sendAlert" class="cursor-pointer" id="Grupo_de_máscara_2" data-name="Grupo de máscara 2" transform="translate(204.334 -529.634)" clip-path="url(#clip-path-502)">
+        <g @click="sendAlertSecondVideo" class="cursor-pointer" id="Grupo_de_máscara_2" data-name="Grupo de máscara 2" transform="translate(204.334 -529.634)" clip-path="url(#clip-path-502)">
           <g id="map-pin-svgrepo-com-2" data-name="map-pin-svgrepo-com" transform="translate(913.966 645.747)">
             <g id="Grupo_504" data-name="Grupo 504">
               <path id="Caminho_471" data-name="Caminho 471" d="M256.444,0A43.39,43.39,0,0,0,222.7,70.709c1.948,2.4,5.207,6.177,6.905,8.76,9.781,14.86,22.329,36.44,25.986,54.15.627,3.024,1.384,3.077,2.2.1A195.851,195.851,0,0,1,281.13,81.47a75.577,75.577,0,0,1,7.14-8.516,43.816,43.816,0,0,0,7.485-11.16A43.357,43.357,0,0,0,256.444,0Zm0,66.89a24.238,24.238,0,1,1,24.24-24.24A24.24,24.24,0,0,1,256.444,66.89Z" transform="translate(-213.017)" fill="#010002"/>
@@ -1561,14 +1561,48 @@
         </g>
       </g>
     </svg>
-    <modal :open="openModal" @closeModal="closeAlert()">
+    <modal :open="openModalFirstVideo" @closeModal="closeAlertFirstVideo()">
       <template v-slot:title>
         Apenas um teste
       </template>
 
       <template v-slot:content>
         <div class="flex justify-center">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/qrO4YZeyl0I?controls=0"
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Wdfd9_IzQHQ?controls=0"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+
+        <div class="mt-4 flex justify-between">
+          <p class="text-sm text-gray-500">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem Ipsum
+          </p>
+          <p class="text-sm text-gray-500">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem Ipsum
+          </p>
+        </div>
+      </template>
+    </modal>
+
+    <modal :open="openModalSecondVideo" @closeModal="closeAlertSecondVideo()">
+      <template v-slot:title>
+        Apenas um teste
+      </template>
+
+      <template v-slot:content>
+        <div class="flex justify-center">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fTBHbm-P3x4?controls=0"
                   title="YouTube video player" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen></iframe>
@@ -1600,13 +1634,23 @@
 import { ref } from 'vue'
 import Modal from '@/components/ui/Modal.vue'
 
-const openModal = ref(false)
+const openModalFirstVideo = ref(false)
 
-const sendAlert = () => {
-  openModal.value = true
+const openModalSecondVideo = ref(false)
+
+const sendAlertFirstVideo = () => {
+  openModalFirstVideo.value = true
 }
 
-const closeAlert = () => {
-  openModal.value = false
+const sendAlertSecondVideo = () => {
+  openModalSecondVideo.value = true
+}
+
+const closeAlertFirstVideo = () => {
+  openModalFirstVideo.value = false
+}
+
+const closeAlertSecondVideo = () => {
+  openModalSecondVideo.value = false
 }
 </script>
