@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between px-20 py-8 mx-auto">
+  <nav class="flex justify-between px-20 py-2 mx-auto">
     <div class="hidden space-x-8 md:flex">
       <router-link to="/">HOME</router-link>
       <router-link to="/panorama">PANORAMA BRASILEIRO</router-link>
