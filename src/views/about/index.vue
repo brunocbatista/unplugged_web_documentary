@@ -1,15 +1,15 @@
 <template>
   <div class="items-center justify-center text-center p-24">
     <div class="flex justify-center mb-10">
-      <div class="w-8/12">
-        <p class="text-xl text-justify mb-2">
+      <div class="citation w-10/12 p-10 rounded-lg shadow-2xl">
+        <p class="text-2xl text-justify mb-2 text-white">
           “A uberização consolida a passagem do estatuto de trabalhador para o de um nanoempresário-de-si
           permanentemente
           disponível ao trabalho; retira-lhe garantias mínimas ao mesmo tempo que mantém sua subordinação; ainda, se
           apropria, de modo administrado e produtivo, de uma perda de formas publicamente estabelecidas e reguladas do
           trabalho.”
         </p>
-        <p class="text-left text-sm">- Ludmila Costhek Abílio</p>
+        <p class="text-left text-sm text-white">- Ludmila Costhek Abílio</p>
       </div>
     </div>
     <p class="text-4xl mb-4">SOBRE O PROJETO</p>
